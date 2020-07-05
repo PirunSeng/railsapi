@@ -2,7 +2,7 @@ class Api::V1::ProductsController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Product.search(params)
+    respond_with Product.search(params).order(:title)
   end
 
   def show
